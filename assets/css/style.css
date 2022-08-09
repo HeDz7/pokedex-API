@@ -9,12 +9,14 @@
 body {
   text-align: center;
   background: linear-gradient(to bottom, #6ab7f5, #fff);
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body main {
   display: inline-block;
-  margin: 2%;
-  padding: 1rem;
   position: relative;
 }
 body main .pokedex {
@@ -50,9 +52,50 @@ body main .form .input-search {
   font-size: clamp(8px, 5vw, 1rem);
   box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
 }
+body main .form .btn-submit {
+  position: absolute;
+  right: 2%;
+  top: 17%;
+  padding: 2% 5%;
+  background-color: #77c2ff;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: inset -2px -2px 2px #888;
+}
+body main .form .btn-submit:active {
+  background-color: rgb(194, 194, 194);
+  color: #444;
+  font-weight: bolder;
+  box-shadow: inset 4px 4px 0px rgb(183, 183, 183);
+}
+body main .reset {
+  position: absolute;
+  bottom: 9%;
+  width: 100%;
+  left: -4%;
+}
+body main .reset .btn-reset {
+  width: 50%;
+  padding: 2%;
+  border: 2px solid #000;
+  border-radius: 0.25rem;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+body main .reset .btn-reset:active {
+  background-color: rgb(194, 194, 194);
+  color: #444;
+  font-weight: bolder;
+}
 body main .buttons {
   position: absolute;
-  bottom: 10%;
+  bottom: 19%;
   left: 50%;
   width: 65%;
   transform: translate(-57%, 0);

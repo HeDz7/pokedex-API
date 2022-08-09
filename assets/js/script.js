@@ -6,6 +6,7 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.input-search');
 const buttonPrev = document.querySelector('.btn-prev');
 const buttonNext = document.querySelector('.btn-next');
+const buttonReset = document.querySelector('.btn-reset');
 
 let searchPokemon = 1;
 
@@ -44,7 +45,8 @@ const renderPokemon = async (pokemon) => {
 }
 
 form.addEventListener('submit', (e) => {
-  
+  let btnSubmit = document.querySelector('.btn-submit')
+
   e.preventDefault();
 
   renderPokemon(input.value.toLowerCase());
@@ -60,6 +62,10 @@ buttonPrev.addEventListener('click', () => {
 buttonNext.addEventListener('click', () => {
   searchPokemon += 1;
   renderPokemon(searchPokemon);
+})
+
+buttonReset.addEventListener('click', () => {
+  renderPokemon(1)
 })
 
 renderPokemon(searchPokemon);
